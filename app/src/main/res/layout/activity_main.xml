@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.converter.currencyconverter.MainActivity">
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/inputAmount"
+        android:hint="@string/currency_input_hint"
+        android:textAlignment="center"
+        android:textSize="14sp" />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/currencyRadioGroup"
+        android:layout_below="@+id/inputAmount"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/aus_dollar"
+            android:text="@string/aus_dollar" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/canadian_dollar"
+            android:text="@string/can_dollar" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/indian_rupee"
+            android:text="@string/ind_rupee" />
+
+    </RadioGroup>
+
+    <TextView
+        android:text="@string/convert_options_lbl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/currencyRadioGroup"
+        android:layout_alignLeft="@+id/currencyRadioGroup"
+        android:layout_alignStart="@+id/currencyRadioGroup"
+        android:layout_marginTop="15dp"
+        android:id="@+id/conversionAmount" />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/convertToRadioGroup"
+        android:layout_marginTop="24dp"
+        android:layout_below="@+id/conversionAmount"
+        android:layout_alignLeft="@+id/conversionAmount"
+        android:layout_alignStart="@+id/conversionAmount">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/us_dollar"
+            android:text="@string/us_dollar" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/brit_pound"
+            android:text="@string/brit_pound" />
+    </RadioGroup>
+
+    <Button
+        android:text="@string/convert_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/convertButton"
+        android:layout_above="@+id/outputAmount"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="28dp"
+        android:onClick="ConvertAmount"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/outputAmount"
+        android:layout_above="@+id/clearButton"
+        android:focusable="false"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="19dp"
+        android:textSize="14sp"
+        android:textAlignment="center"
+        android:hint="@string/converted_amount_hint" />
+
+    <Button
+        android:text="@string/clear_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:id="@+id/clearButton"
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/convertButton"
+        android:layout_alignStart="@+id/convertButton"
+        android:onClick="ClearAll"/>
+
+    <TextView
+        android:text="@string/notice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/notice"
+        android:textSize="12sp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textAlignment="center"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+</RelativeLayout>

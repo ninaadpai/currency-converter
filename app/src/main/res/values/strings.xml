@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">CurrencyConverter</string>
+    <string name="title_bar">Currency Converter</string>
+    <!--Edit texts-->
+    <string name="currency_input_hint">Input Amount</string>
+    <string name="converted_amount_hint">Converted Amount</string>
+    <!--Radio group 1-->
+    <string name="aus_dollar">AUD</string>
+    <string name="can_dollar">CAN</string>
+    <string name="ind_rupee">INR</string>
+    <!--Radio group 2-->
+    <string name="us_dollar">USD</string>
+    <string name="brit_pound">GBP</string>
+    <string name="convert_options_lbl">Convert To</string>
+    <!--Buttons-->
+    <string name="convert_button">Convert</string>
+    <string name="clear_button">Clear</string>
+    <!--Notice-->
+    <string name="notice">Exchange rates over USD as per January 15, 2017.</string>
+</resources>
